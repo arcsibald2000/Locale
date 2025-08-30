@@ -38,7 +38,7 @@
         "General.UnderstandEnable": "Megértettem, bekapcsolás",
         "General.Dismiss": "Elutasítás",
         "General.Edit": "Szerkesztés",
-
+        "General.DontShowAgain": "Ne mutasd többször",
         "General.UI.SearchPrompt": "Keresés...",
         "General.UI.SearchPromptLong": "Itt keress...",
         "General.UI.ToggleEditMode": "Szerkesztési mód váltás",
@@ -73,6 +73,10 @@
         "Locomotion.WalkRunGripping.Description": "Képes leszel sétálni, futni, ugorni és mászni.",
         "Locomotion.ZeroG.Name": "Súlytalanság",
         "Locomotion.ZeroG.Description": "Súlytalan mozgás",
+        "Locomotion.GrabWorld.Name": "Világfogásos mozgás",
+        "Locomotion.GrabWorld.Description": "Készít egy világrögzítési pontot referneciával és ahhoz relatívan mozgatja a felhasználót.",
+        "Locomotion.Slide.Name": "Csúszás",
+        "Locomotion.Slide.Description": "Egyszerű csúszó mozgás, ami felülethez tapad, ha létezik, különben repül.",
 
         "Interaction.Destroy": "Elpusztítás",
         "Interaction.Duplicate": "Megkettőzés",
@@ -82,15 +86,29 @@
         "Interaction.Undo": "Visszavonás",
         "Interaction.Redo": "Visszaállítás",
         "Interaction.EquipTool": "Kézhezvétel",
+        "Interaction.DequipTool": "Elengedés",
         "Interaction.ScalingEnabled": "Méretezés engedélyezve",
         "Interaction.ScalingDisabled": "Méretezés letiltva",
         "Interaction.ResetScale": "Méretezés alapértékre",
         "Interaction.LaserEnabled": "Mutató bekapcsolva",
         "Interaction.LaserDisabled": "Mutató kikapcsolva",
+        "Interaction.Grab.Palm": "Fogás: Tenyér",
+        "Interaction.Grab.Precision": "Fogás: Precíz",
+        "Interaction.Grab.Auto": "Fogás: Automatikus",
+        "Interaction.Grab.Off": "Fogás: Csak mutatóval",
+        "Interaction.Grabbing": "Fogás",
+        "Interaction.Grab.StickyGrab": "Automatikus tartás",
+        "Interaction.Grab.HoldToHold": "Nyomva tartás",
         "Interaction.Locomotion": "Mozgási mód",
         "Interaction.Locomotion.None": "Semmi",
-        
+
+        "Interaction.NamedEquipTool": "{name} kézhezvétele",
         "Interaction.NamedEquipTool.Default": "Eszköz",
+
+        "Interaction.EnterAnchor": "Rögzítési pontba lépés",
+        "Interaction.ExitAnchor": "Rögzítési pont elhagyása",
+
+        "Interaction.EquipAvatar": "Avatár felvétele",
 
         "Interaction.SaveAsScreenshot": "Képernyőkép mentése",
         "Interaction.ExportScreenshot": "Képernyőkép exportálása",
@@ -100,14 +118,19 @@
         "Interaction.CopyImage": "Kép másolása",
 
         "Inventory.OpenWorld": "Világ megnyitása",
+        "Inventory.Equip": "Kézhezvétel",
         "Inventory.Delete": "Eltávolítás",
         "Inventory.CreateDirectory": "Mappa létrehozása",
+        "Inventory.SaveHeld": "Kézben tartott elmentése",
+        "Inventory.GetURL": "URL lekérése",
         "Inventory.Inventories": "Eszköztárak",
         "Inventory.Share": "Megosztás",
         "Inventory.Unshare": "Megosztás visszavonása",
         "Inventory.SaveAvatar": "Kinézet mentése",
         "Inventory.Favorite.Home": "Otthon beállítása",
         "Inventory.Favorite.ProgressBar": "Előrehaladási csík beállítása",
+        "Inventory.Favorite.AudioStreamController": "Élő hanglejátszó beállítása",
+        "Inventory.Favorite.TextDisplay": "Szöveg megjelenítő beállítása",
         "Inventory.Favorite.VideoPlayer": "Videólejátszó beállítása",
         "Inventory.Favorite.AudioPlayer": "Hanglejátszó beállítása",
         "Inventory.Favorite.InteractiveCamera": "Kamera beállítása",
@@ -117,6 +140,7 @@
         "Inventory.Favorite.ColorDialog": "Színválasztó beállítása",
         "Inventory.Favorite.Hyperlink": "Hivatkozásmegjelenítő beállítása",
         "Inventory.Favorite.Document": "Dokumentummegtekintő beállítása",
+        "Inventory.SpawnFacet": "Facet létrehozása",
 
         "Dash.Screens.Home": "Otthon",
         "Dash.Screens.Worlds": "Világok",
@@ -126,6 +150,7 @@
         "Dash.Screens.Session": "Szoba",
         "Dash.Screens.FileBrowser": "Fájlok",
         "Dash.Screens.Settings": "Beállítások",
+        "Dash.Screens.Help": "Segítség",
         "Dash.Screens.Exit": "Bezárás",
 
         "Dash.Actions.PasteFromClipboard": "Beillesztés a vágólapról",
@@ -143,6 +168,7 @@
         "Dash.Exit.Shoutouts.AndMore": " ...és még sokan másnak!",
         "Dash.Exit.Shoutouts.You": "{name} (Ez te vagy! Neked is köszönjük!)",
         "Dash.Exit.ThankYou": "Köszönjük, hogy a {appName}-t választottad!",
+        "Dash.Exit.SubmittedBy": "{name} által beküldve",
 
         "Facets.FPS": "{fps}<size=61.803%> FPS</size>",
 
@@ -160,10 +186,15 @@
         "World.Connection.Connected": "Csatlakozva",
         "World.Connection.SyncingInitialState": "Világ szinkronizálása",
 
-        "World.Connection.LNL.DirectIP": "LNL közvetlen cím",
-        "World.Connection.SteamNetworkingSockets": "Steam Networking Socket",
+        "World.Connection.LNL.DirectIP": "LNL közvetlen cím<br><size=75%>{address}</size>",
+        "World.Connection.LNL.LNLPoke": "LNL Poke kérése",
+        "World.Connection.LNL.NATPunchthrough": "LNL NAT áttörés {n}",
+        "World.Connection.LNL.Relay": "LNL Relay",
+        "World.Connection.SteamNetworkingSockets": "Steam hálózati csatornák",
+        "World.Connection.TCP": "TCP<br><size=75%>{address}</size>",
 
         "World.Error.AccessDenied": "Hozzáférés megtagadva",
+        "World.Error.SecurityViolation": "Biztonsági szabálysértés",
         "World.Error.OnlyRegisteredUsers": "Csak regisztrált felhasználók csatlakozhatnak",
         "World.Error.OnlyContacts": "Csak a szobatulaj barátai csatlakozhatnak",
         "World.Error.OnlyContactsOfContacts": "Csak a jelenlévők barátai csatlakozhatnak",
@@ -183,7 +214,10 @@
         "World.Error.HostBlockedDetail": "A szoba tulaját letiltottad",
         "World.Error.WorldCrash": "A világ összeomlott",
         "World.Error.WorldCrashDetail": "A világ frissítése közben kritikus hiba következett be",
+        "World.Error.Handshake": "Kapcsolódási hiba",
         "World.Error.Unknown": "Ismeretlen hiba",
+        "World.Error.FailedToCreateBanAccessKey": "Nem sikerült létrehozni a tiltási kulcsot",
+        "World.Error.UnhandledError": "Nem lekezelt hiba",
 
         "World.Config.Name": "Világ neve:",
         "World.Config.Description": "Leírás:",
@@ -230,6 +264,7 @@
 
         "World.Actions.GetWorldOrb": "Világgömb megszerzése",
         "World.Actions.CopyWorldURL": "Világ hivatkozásának másolása",
+        "World.Actions.CopyRecordURL": "Rekord hivatkozásának másolása",
         "World.Actions.StartCustomSession": "Testreszabott szoba létrehozása",
         "World.Actions.ModifyMetadata": "Metaadatok szerkesztése",
         "World.Actions.GetSessionOrb": "Szobagömb megszerzése",
@@ -240,6 +275,7 @@
         "World.Indicator.Author": "Alkotó: {name}",
         "World.Indicator.Host": "Szoba tulaja: {name}",
         "World.Indicator.Hosting": "Hosztolás",
+        "World.Indicator.Sessions": "{n,plural, one {# munkamenet} other {# munkamenet}}",
         "World.Indicator.Users": "Felhasználók",
         "World.Indicator.Users.None": "(nincs aktív szoba)",
         "World.Indicator.Description": "Leírás",
@@ -254,6 +290,7 @@
         "World.Detail.Uptime": "Ennyi ideje aktív",
         "World.Detail.AccessLevel": "Láthatóság",
         "World.Detail.Users": "Felhasználók",
+        "World.Detail.Users.Count": "{active}{away, select, 0 {} other { (+{away} távollévő)}} a maximális {max} felhasználóból",
 
         "World.Detail.WorldInformationHeader": "Világ információ",
         "World.Detail.PublishDate": "Közzétéve",
@@ -267,8 +304,10 @@
         "World.Category.Featured": "Felkapott",
         "World.Category.PublishedWorlds": "Közzétett világok",
         "World.Category.ActiveSessions": "Aktív szobák",
-        "World.Category.ContactsSessions": "Barát-szobák",
+        "World.Category.ContactsSessions": "Barát szobák",
+        "World.Category.HeadlessSessions": "Headless szobák",
         "World.Category.Social": "Közösségi",
+        "World.Category.Avatars": "Avatárok",
         "World.Category.Games": "Játékok",
         "World.Category.Art": "Művészet",
         "World.Category.Tutorials": "Kezdőknek",
@@ -285,6 +324,7 @@
         "World.AccessLevel.LAN": "LAN",
         "World.AccessLevel.Private": "Privát (csak meghívóval)",
 
+        "World.SortParameter.SearchScore": "Keresési pontszám",
         "World.SortParameter.Name": "Név",
         "World.SortParameter.OpenedWorldCount": "Megnyitott világok",
         "World.SortParameter.TotalSessionCount": "Összes szobák",
@@ -296,19 +336,24 @@
         "World.SortParameter.LastVisit": "Legutoljára meglátogatott",
         "World.SortParameter.Random": "Véletlenszerű",
 
+        "World.Filter.DataSources": "Adatforrások:",
         "World.Filter.OpenedWorlds": "Megnyitott világok",
         "World.Filter.ActiveSessions": "Aktív szobák",
         "World.Filter.PublishedWorlds": "Közzétett világok",
         "World.Filter.LocalWorlds": "Helyi világok",
+        "World.Filter.BaseSearch": "Alap keresés:",
         "World.Filter.ByOwner": "Alkotótól:",
         "World.Filter.UserOwner": "Felhasználói tulaj",
-        "World.Filter.GroupOwner": "Csoportos tulaj",
- 
+        "World.Filter.GroupOwner": "Csoportos tulaj"
+        "World.Filter.SubmittedToGroup": "Elkülve csoportnak:",
         "World.Filter.Featured": "Csak felkapott",
         "World.Filter.MyWorlds": "Világaim",
         "World.Filter.SessionFiltering": "Szoba-szűrő:",
         "World.Filter.MinimumUsers": "Minimum felhasználó: <b>{n}</b>",
         "World.Filter.MinimumContacts": "Minimum barátok: <b>{n}</b>",
+        "World.Filter.OnlyHeadless": "Csak Headless hostolás",
+        "World.Filter.IncompatibleSessions": "Nem kompatibilis szobák",
+        "World.Filter.MaxAccessLevel": "Max hozzáférési szint:",
         "World.Filter.MinimumUptime": "Legalább ennyi ideje aktív:",
         "World.Filter.Sorting": "Sorolás:",
 
@@ -321,6 +366,7 @@
         "World.Edit.AccessPrivate": "Csak én",
         "World.Edit.AccessPatreon": "Patreon támogatók",
         "World.Edit.AccessPublic": "Bárki (nyilvános)",
+        "World.Edit.ReadOnly": "Csak olvasható",
 
         "Tools.AvatarCreator": "Kinézet-készítő",
         "Tools.FullBodyCalibrator": "Avatár testhez kalibrálása",
@@ -339,6 +385,8 @@
         "Tools.StreamAudio.PlayForOwner.Off": "Visszajátszás: ki",
         "Tools.StreamAudio.PlayForOwner.On": "Visszajátszás: be",
 
+        "Options.FreeformDash.On": "Freeform Dash: Bekapcsolás",
+        "Options.FreeformDash.Off": "Freeform Dash: Kikapcsolás",
         "Options.SeatedMode.On": "Ülés: Be",
         "Options.SeatedMode.Off": "Ülés: Ki",
         "Options.Nameplates.All": "Névtáblák: Mind",
@@ -346,6 +394,10 @@
         "Options.Nameplates.Hide": "Névtáblák: elrejtése",
         "Options.Nameplates.DefaultStyle": "Alapértelmezett névtáblák",
         "Options.Nameplates.CustomStyle": "Egyedi névtáblák engedélyezése",
+
+        "Indicator.OnlineUsers": "<color=hero.yellow>{users}</color> Elérhető {users,plural, one {felhasználó} other {felhasználók}}",
+        "Indicator.OnlineUsersVR": "<color=hero.purple>{users}</color> {users, plural, one {felhasználó} other {felhasználók}} VR módban",
+        "Indicator.OnlineUsersDesktop": "<color=hero.cyan>{users}</color> {users, plural, one {felhasználó} other {felhasználók}} Asztali módban",
 
         "Indicator.ServerStatus.Status": "Felhő állapota",
         "Indicator.ServerStatus.Good": "Jó",
@@ -355,6 +407,8 @@
 
         "Indicator.Sync.AllSynced": "Minden szinkronizálva",
         "Indicator.Sync.SyncingItems": "Szinkronizálás <br><size=61.8033%>{item_count, plural, one {# Item} other {# Items}}</size>",
+        "Indicator.Sync.UploadingVariants": "Feltöltés<br><size=61.8033%>Objektum variációk</size>",
+        "Indicator.Sync.SyncError": "Szinkronizálási hiba <size=61.803%>Nézd meg a logot további információkért</size>",
         "Indicator.Sync.StorageFull": "Megtelt a tárhely <size=61.803%>Sikertelen szinkronizálás</size>",
 
         "Indicator.Storage.StorageFull": "Megtelt a tárhely",
@@ -374,16 +428,16 @@
         "Login.MissingUID": "Hiányzó eszközinformáció",
         "Login.MissingUID.Description": "Próbáld meg újra fetelepíteni az alkalmazást, vagy lépj kapcsolatba: {supportUrl}.",
 
-
+        "Login.MissingSecretMachineId": "Hiányzó titkos gépazonosító",
         "Login.MissingSecretMachineId.Description": "Próbáld meg újra fetelepíteni az alkalmazást, vagy lépj kapcsolatba: {supportUrl}.",
 
-
+        "Login.MalformedSecretMachineId": "Érvénytelen titkos gépazonosító",
         "Login.MalformedSecretMachineId.Description": "Próbáld meg újra fetelepíteni az alkalmazást, vagy lépj kapcsolatba: {supportUrl}.",
 
-
+        "Register.MissingUID": "Hiányzó eszközinformációk",
         "Register.MissingUID.Description": "Próbáld meg újra fetelepíteni az alkalmazást, vagy lépj kapcsolatba: {supportUrl}.",
 
-
+        "Register.MalformedUID": "Érvénytelen eszközinformációk",
         "Register.MalformedUID.Description": "Próbáld meg újra fetelepíteni az alkalmazást, vagy lépj kapcsolatba: {supportUrl}.",
 
         "Login.MissingLogin": "Üres a mező",
@@ -404,7 +458,7 @@
         "Login.AccountBanned": "A fiókod ki van tiltva.",
         "Login.AccountBanned.Description": "Lépj kapcsolatba a moderációs csoporttal: {moderationUrl}.",
 
-
+        "Login.DuplicateAccount": "Már létező fiók",
         "Login.DuplicateAccount.Description": "Lépj kapcsolatba a moderációs csoporttal: {supportUrl}.",
 
         "Login.UnknownError": "Ismeretlen hiba",
@@ -461,7 +515,8 @@
         "Recovery.IncorrectEmail": "Hibás e-mail cím",
         "Recovery.IncorrectEmail.Description": "Hibás e-mail címet adtál meg. Kérlek nézd meg, nem gépelted el.",
 
-       
+        "Recovery.NoPasswordSetup": "Nincs jelszó beállítva",
+        "Recovery.NoPasswordSetup.Description": "Kérlek, lépj kapcsolatba velünk: {supportUrl}.",
 
         "Register.UnknownError": "Ismeretlen hiba",
         "Register.UnknownError.Description": "Hiba történt a regisztráció során. Kérlek, lépj kapcsolatba a moderációs csoporttal: {supportUrl}.",
@@ -486,14 +541,14 @@
         "Account.RecoverPassword": "Elfelejtettem a jelszót",
         "Account.LiveEmailWarning": "<color=#f00>FIGYELEM:</color> a live.com, hotmail.com, outlook.com és egyéb Microsoft által üzemeltetett címekhez a megerősítési e-mail fogadása 1-2 napot is igénybe vehet",
         "Account.PasswordRules": "(legalább 8 karakter, 1 szám, 1 nagy- és kisbetű)",
-
-        
+        "Account.LostPassword": "Elfelejtett jelszó",
+        "Account.SendRecoveryCode": "Küldj visszaállító kódot",
         "Account.ResetPasswordHeader": "Jelszó visszaállítása",
-
-
+        "Account.ResetPasswordInstructions": "A visszaállító kód e-mailben elküldve. Másold ide a visszaállításhoz:",
+        "Account.RecoveryCode": "Visszaállító kód:",
         "Account.NewPassword": "Új jelszó:",
         "Account.ResetPassword": "Új jelszó beállítása",
-
+        "Account.Requesting": "Kérés...",
         "Account.ErrorPasswordMismatch": "A jelszavak nem egyeznek!",
         "Account.ErrorEmailMismatch": "Az e-mail címek nem egyeznek!",
         "Account.ErrorLoginError": "Bejelentkezési hiba:",
@@ -505,7 +560,7 @@
         "Account.AlternateMethods": "Bejelentkezés egy harmadik fél szolgáltatással:",
 
         "Account.Saml2.Title": "SAML 2.0",
-
+        "Account.Saml2.Select": "Kérlek válaszd ki a használni kívánt SAML 2.0 kiszolgálót:",
         "Account.Saml2.LoggingIn": "Várakozás a bejelentkezésre (nézd meg a böngésződ)...",
 
         "Account.TOTP.Title": "Kétlépcsős azonosítás",
@@ -536,6 +591,7 @@
         "Account.Type.Standard": "Általános fiók",
         "Account.Type.Business": "Üzleti fiók",
         "Account.Type.Patreon": "Patreon támogató",
+        "Account.Type.Stripe": "Stripe támogató",
         "Account.Type.Mentor": "{platform} mentor",
         "Account.Type.Moderator": "{platform} moderátor",
         "Account.Type.Team": "{platform} csapat",
@@ -551,6 +607,9 @@
         "Profile.Status.Busy": "Elfoglalt",
         "Profile.Status.Invisible": "Láthatatlan",
         "Profile.Status.Offline": "Kijelentkezve",
+        "Profile.Status.Headless": "Headless Host",
+        "Profile.Status.Bot": "<b>Bot:</b> {version}",
+        "Profile.Status.ChatClient": "<b>Chat klines:</b> {version}",
 
         "Session.Tab.Settings": "Beállítások",
         "Session.Tab.Users": "Felhasználók",
@@ -561,6 +620,18 @@
         "Session.Permission.Contact": "Barát alapbeállításai:",
         "Session.Permission.Host": "Szobatulaj alapbeállításai:",
         "Session.Permission.PermissionOverrideCount": "Engedély átírása: {n,select, -1 {---} other {{n}}}",
+        "Session.Permission.ClearOverrides": "Egyéni beállítások visszaállítása",
+
+        "Session.JoinVerifier.EnableHeader": "Egyedi csatlakozás-ellenőrző aktiválása?",
+        "Session.JoinVerifier.EnableText": "<color=red>FIGYELEM:</color> Éppen az aktuális világhoz tartozó egyedi csatlakozás-ellenőrzés aktiválására készülsz. Mielőtt ezt megtennéd, győződj meg róla, hogy megbízol a világ készítőjében, mivel az egyedi ellenőrző megkerülheti a standard session-hozzáférési szabályokat, és saját szabályai szerint engedhet vagy blokkolhat felhasználókat.",
+        "Session.JoinVerifier.Label": "Egyedi csatlakozás-ellenőrző használata: {name}",
+        "Session.JoinVerifier.ComponentWarning": "<color=red>FIGYELEM:</color> Jelenleg nincs mechanizmus arra, hogy megakadályozza az ellenőrző manipulálását az aktiválás után. Ha aggódsz a ProtoFlux-verifikáció beállításainak esetleges módosítása miatt, NE HASZNÁLD ezt a funkciót, és NE AKTIVÁLD a világodban.",
+        "Session.JoinVerifier.SetCustomVerifier": "Beállítás egyéni belépés-ellenőrzőként",
+
+        "Permissions.NotAllowedToSpawn": "Itt nem spawnolhatsz tárgyakat.",
+        "Permissions.NotAllowedToSave": "Nem engedélyezett tárgyak mentése ebben a világban.",
+        "Permissions.NotAllowedToSwapAvatar": "Itt nem válthatsz egyéni avatárra.",
+        "Permissions.SavingDisabledForItem": "Mentés nem engedéjezett",
 
         "User.Actions.Silence": "Csitítás",
         "User.Actions.Mute": "Némítás",
@@ -576,6 +647,7 @@
         "Contacts.IgnoreRequest": "Barátkérelem mellőzése",
         "Contacts.Invite": "Meghívás ide",
         "Contacts.RevokeInvite": "Meghívás visszavonása",
+        "Contacts.RequestInvite": "Meghívás kérése",
         "Contacts.BanFromAllSessions": "Kitiltás minden általam vezetett szobámból",
         "Contacts.UnbanFromAllSessions": "Kitiltás visszavonása minden általam vezetett szobámból",
         "Contacts.BanFromCurrentWorld": "Kitiltás a jelenlegi világból",
@@ -589,6 +661,7 @@
         "Contacts.WriteMessage": "Üzenet írása...",
 
         "Contacts.InSession": "Itt van: {name}",
+        "Contacts.NoSession": "Nincs világban",
         "Contacts.InPrivate": "Privát világban van",
         "Contacts.InContactsOnly": "Barátok világban van",
         "Contacts.InHidden": "Rejtett világban van",
@@ -602,7 +675,21 @@
         "Contacts.Blocked": "Blokkolva",
         "Contacts.SearchResult": "Keresési eredmények",
         "Contacts.Bot": "Bot-fiók",
+        "Contacts.Migrated": "Barát nem került migrálásra ",
+        "Contacts.IncompatibleSession": "Nem kompatibilis szoba",
+        "Contacts.AskToJoin": "<color=hero.yellow>Kérdezz</color> a csatlakozáshoz",
 
+        "Contacts.InviteRequest.UserWantsToJoin": "{username} szeretne hozzád csatlakozni",
+        "Contacts.InviteRequest.UserWantsToInviteAnother": "\"{requestingUser}\" szeretne meghívni \"{userToInvite}\" a \"{sessionName}\"  világba",
+        "Contacts.InviteRequest.GrantInvite": "Meghívás engedélyezése (egyszeri)",
+        "Contacts.InviteRequest.AddAsContact": "\"{username}\" hozzáadása barátként",
+        "Contacts.InviteRequest.AddAsContactOfHeadless": "\"{username}\" hozzásadása headless barátként",
+        "Contacts.InviteRequest.AddHostAsContact": "\"{username}\" (host) hozzádaása barátként",
+        "Contacts.InviteRequest.HostIsUnregistered": "A host felhasználó nincs regisztrálva",
+        "Contacts.InviteRequest.ForwardToHost": "Továbbítás a host felhasználónak: {username}",
+        "Contacts.InviteRequest.SentRequest": "Kért meghívás",
+        "Contacts.InviteRequest.ForwardedRequest": "Továbbított meghívás kérés \"{username}\" felhasználótól a \"{sessionName}\" szobához",
+        "Contacts.InviteRequest.GrantedRequest": "\"{username}\" elfogadta a meghívásta a \"{sessionName}\" szobába",
 
         "Notifications.IsSociable": "ismerkedésre kész, bökd meg, vagy hívd meg!",
         "Notifications.IsOnline": "elérhető",
