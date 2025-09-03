@@ -925,6 +925,8 @@
         "CreateNew.Editor.AssetOptimizationWizard": "Eszköz optimalizáló varázsló",
         "CreateNew.Editor.CubemapCreator": "Cubemap készítő",
         "CreateNew.Editor.ReflectionProbes": "Visszaverődés érzékelő varászló",
+        "CreateNew.Editor.TexturePackingWizard": "Textúra csomagolás varázsló",
+        "CreateNew.Editor.TextureUnpackingWizard": "Textúra kicsomagolás varázsló"
 
         "CreateNew.3DModel": "3D modell",
         "CreateNew.3DModel.Triangle": "Háromszög",
@@ -1005,11 +1007,11 @@
         "Importer.LUT.Failure.Heading": "LUT importálás sikertelen <color=hero.yellow>{image}</color>",
         "Importer.LUT.Failure.Description": "LUT importálás sikertelen a következő hiba miatt:\n\n<color=hero.red>{error}</color>",
 
-        "Importer.ImageVideo.LayoutPrompt": "What layout does it use?",
-        "Importer.ImageVideo.LayoutHorizontalLR": "Side by Side LR",
-        "Importer.ImageVideo.LayoutHorizontalRL": "Side by Side RL",
-        "Importer.ImageVideo.LayoutVerticalLR": "Top Bottom LR",
-        "Importer.ImageVideo.LayoutVerticalRL": "Top Bottom RL",
+        "Importer.ImageVideo.LayoutPrompt": "Milyen elrendezésben?",
+        "Importer.ImageVideo.LayoutHorizontalLR": "Egymás mellett BJ",
+        "Importer.ImageVideo.LayoutHorizontalRL": "Egymás mellett JB",
+        "Importer.ImageVideo.LayoutVerticalLR": "Fentről lefele BJ",
+        "Importer.ImageVideo.LayoutVerticalRL": "Fentről lefele JB",
 
         "Importer.Model.Title": "Model importálása",
         "Importer.Model.Prompt": "Mit szeretnél importálni?",
